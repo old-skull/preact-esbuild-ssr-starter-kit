@@ -1,11 +1,14 @@
-import { App as Server } from '@tinyhttp/app';
+import { App as Server, Response } from '@tinyhttp/app';
 import pc from 'picocolors';
 import { renderToString } from 'preact-render-to-string';
 import sirv from 'sirv';
 import { routes } from './app/routing/routing';
 import { template } from './app/_template/base';
 
-const app = new Server();
+const app = new Server({
+  // should match 404 route in the `routing.tsx`
+  noMatchHandler: (_, res: Response) => res.redirect('/404'),
+});
 
 // === middleware ===
 app.use(
@@ -18,7 +21,7 @@ app.use(
 
 // === routes ===
 routes.forEach(route =>
-  app.get(route.path, (_, res) => {
+  app.get(route.path, (_, res: Response) => {
     res.header('Content-Type', 'text/html; charset=utf-8');
     res.send(template(renderToString(<route.component />)));
   }),
