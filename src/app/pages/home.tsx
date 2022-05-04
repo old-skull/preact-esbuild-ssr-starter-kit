@@ -1,8 +1,8 @@
-import { Fragment, FunctionComponent, h } from 'preact';
+import { FunctionalComponent } from 'preact';
 import { Link } from 'preact-router/match';
 import { useEffect, useState } from 'preact/hooks';
 
-export const Home: FunctionComponent = () => {
+export const Home: FunctionalComponent = () => {
   const [msg, setMsg] = useState<string>('');
 
   useEffect(() => setMsg('Preact'), []);

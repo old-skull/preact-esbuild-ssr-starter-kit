@@ -1,6 +1,5 @@
 import { App as Server } from '@tinyhttp/app';
 import pc from 'picocolors';
-import { h } from 'preact';
 import { renderToString } from 'preact-render-to-string';
 import sirv from 'sirv';
 import { routes } from './app/routing/routing';

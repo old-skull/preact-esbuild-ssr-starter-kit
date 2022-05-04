@@ -7,7 +7,7 @@
     "lib": ["esnext", "dom", "dom.iterable"],
     "removeComments": true,
     "allowSyntheticDefaultImports": true,
-    "jsx": "react",
+    "jsx": "preserve",
     "jsxFactory": "h",
     "jsxFragmentFactory": "Fragment",
     "allowJs": true,
