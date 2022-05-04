@@ -39,6 +39,22 @@ src/
    - Maps application `routes` to the server routes.
    - Renders components via `renderToString` and template from `_templates`.
 
+## Serve-side comparsion and alternatives
+
+### Output size comparsion(minimal app)
+
+- express + static: ~1.5mb
+- fastify + @fastify/static: ~750kb
+- @tinyhttp/app + sirv: ~220kb
+
+### Benchmarks
+
+**_NOTE:_**: Unfortunately, this table doesn't contains benches for tinyhttp
+
+[fastify/benchmarks](https://github.com/fastify/benchmarks/#benchmarks)
+
+### Choose your fighter `¯\_(ツ)_/¯`
+
 ## Credits
 
 - [How to Set Up Server Side Rendering (SSR) With React, express.js, and esbuild](https://devtails.xyz/how-to-set-up-server-side-rendering-ssr-with-react-and-esbuild)
