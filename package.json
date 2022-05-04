@@ -1,0 +1,41 @@
+{
+  "name": "preact-esbuild-ssr-starter-kit",
+  "version": "1.0.0",
+  "description": "Application starter kit using Preact, Esbuild with SSR",
+  "scripts": {
+    "serve": "node build/server.js NODE_ENV=dev",
+    "serve:prod": "node build/server.js NODE_ENV=prod",
+    "prebuild": "rimraf build",
+    "build:client": "esbuild src/client.tsx --bundle --minify --outfile=build/client.js",
+    "build:server": "esbuild src/server.tsx --bundle --minify --platform=node --outfile=build/server.js",
+    "build": "npm-run-all --serial prebuild build:*",
+    "format": "prettier --write \"./**/*.{ts,tsx}\"",
+    "lint": "eslint \"./src/**/*.{ts,tsx}\" --fix"
+  },
+  "keywords": [],
+  "author": "TicTak21",
+  "license": "MIT",
+  "dependencies": {
+    "@tinyhttp/app": "^2.0.20",
+    "esbuild": "^0.14.38",
+    "picocolors": "^1.0.0",
+    "preact": "^10.7.1",
+    "preact-render-to-string": "^5.2.0",
+    "preact-router": "^4.0.1",
+    "rm": "^0.1.8",
+    "sirv": "^2.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.31",
+    "@typescript-eslint/eslint-plugin": "^5.22.0",
+    "@typescript-eslint/parser": "^5.22.0",
+    "eslint": "^8.14.0",
+    "eslint-config-preact": "^1.3.0",
+    "eslint-plugin-react": "^7.29.4",
+    "eslint-plugin-react-hooks": "^4.5.0",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^2.6.2",
+    "rimraf": "^3.0.2",
+    "typescript": "^4.6.4"
+  }
+}
