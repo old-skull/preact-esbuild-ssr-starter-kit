@@ -54,5 +54,13 @@
     "react/no-find-dom-node": 2,
     "react/no-is-mounted": 2,
     "react/no-string-refs": 2
-  }
+  },
+  "overrides": [
+    {
+      "files": ["*.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": "off"
+      }
+    }
+  ]
 }

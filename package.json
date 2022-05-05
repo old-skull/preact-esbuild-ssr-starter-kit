@@ -6,8 +6,8 @@
     "serve": "node build/server.js NODE_ENV=dev",
     "serve:prod": "node build/server.js NODE_ENV=prod",
     "prebuild": "rimraf build",
-    "build:client": "esbuild src/client.tsx --bundle --minify --inject:./src/shim/preact-shim.js --outfile=build/client.js",
-    "build:server": "esbuild src/server.tsx --bundle --minify --inject:./src/shim/preact-shim.js --platform=node --outfile=build/server.js",
+    "build:server": "node ./scripts/build-server.js",
+    "build:client": "node ./scripts/build-client.js",
     "build": "npm-run-all --serial prebuild build:*",
     "format": "prettier --write \"./**/*.{ts,tsx}\"",
     "lint": "eslint \"./src/**/*.{ts,tsx}\" --fix"
