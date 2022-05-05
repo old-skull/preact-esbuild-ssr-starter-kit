@@ -15,7 +15,7 @@ app.use(
   sirv('build', {
     maxAge: 31536000,
     immutable: true,
-    dev: process.env.NODE_ENV === 'dev',
+    dev: false,
   }),
 );
 
