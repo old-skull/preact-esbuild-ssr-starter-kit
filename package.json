@@ -2,6 +2,7 @@
   "name": "preact-esbuild-ssr-starter-kit",
   "version": "1.0.0",
   "description": "Application starter kit using Preact, Esbuild with SSR",
+  "type": "module",
   "scripts": {
     "serve": "node build/server.js NODE_ENV=dev",
     "serve:prod": "node build/server.js NODE_ENV=prod",

@@ -1,8 +1,11 @@
-require('esbuild').buildSync({
+import { buildSync } from 'esbuild';
+
+buildSync({
   entryPoints: ['./src/server.tsx'],
   bundle: true,
   minify: true,
+  format: 'esm',
   platform: 'node',
-  inject: ['./scripts/shim/preact-shim.js'],
+  inject: ['./scripts/shims/preact.shim.js', './scripts/shims/require.shim.js'],
   outfile: './build/server.js',
 });
