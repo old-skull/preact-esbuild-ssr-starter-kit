@@ -8,4 +8,5 @@ buildSync({
   platform: 'browser',
   inject: ['./scripts/shims/preact.shim.js'],
   outfile: './build/client.js',
+  logLevel: 'info',
 });

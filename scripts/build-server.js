@@ -8,4 +8,5 @@ buildSync({
   platform: 'node',
   inject: ['./scripts/shims/preact.shim.js', './scripts/shims/require.shim.js'],
   outfile: './build/server.js',
+  logLevel: 'info',
 });
