@@ -2,7 +2,7 @@ import { App as Server, Response } from '@tinyhttp/app';
 import pc from 'picocolors';
 import { renderToString } from 'preact-render-to-string';
 import sirv from 'sirv';
-import { routes } from './app/routing/routing';
+import { routes } from './app/app.routing';
 import { template } from './app/_template/base';
 
 const app = new Server({
@@ -20,10 +20,12 @@ app.use(
 );
 
 // === routes ===
-routes.forEach(route =>
-  app.get(route.path, (_, res: Response) => {
-    res.header('Content-Type', 'text/html; charset=utf-8');
-    res.send(template(renderToString(<route.component />)));
+routes.forEach(({ path, component: Component }) =>
+  app.get(path, (_, res: Response) => {
+    const html = renderToString(<Component />);
+    const page = template(html);
+
+    res.header('Content-Type', 'text/html; charset=utf-8').send(page);
   }),
 );
 
