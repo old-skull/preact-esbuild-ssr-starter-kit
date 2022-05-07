@@ -1,5 +1,7 @@
 # preact-esbuild-ssr-starter-kit
 
+🏗🏗🏗 Work in progress 🏗🏗🏗
+
 ## About
 
 ### Core
