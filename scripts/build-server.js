@@ -6,6 +6,8 @@ buildSync({
   minify: true,
   format: 'esm',
   platform: 'node',
+  jsxFactory: 'h',
+  jsxFragment: 'Fragment',
   inject: [
     './scripts/shims/preact.shim.js',
     './scripts/shims/require.shim.js',
