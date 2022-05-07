@@ -68,7 +68,8 @@ pnpm format
 ### Lint via ESLint
 
 ```bash
-pnpm li
+pnpm lint
+```
 
 ## Alternatives
 
@@ -127,4 +128,3 @@ You could move `app.routing.tsx` to the App component [like this](https://github
 - [How to Set Up Server Side Rendering (SSR) With React, express.js, and esbuild](https://devtails.xyz/how-to-set-up-server-side-rendering-ssr-with-react-and-esbuild)
 - [fastify-preact-ssr](https://github.com/sebringrose/fastify-preact-ssr)
 - [eslint config](https://github.com/preactjs/eslint-config-preact/blob/master/index.js)
-```
