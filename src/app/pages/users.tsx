@@ -1,9 +1,9 @@
 import { FunctionalComponent } from 'preact';
 
-export const About: FunctionalComponent = () => {
+export const Users: FunctionalComponent = () => {
   return (
     <>
-      <h1>About</h1>
+      <h1>Users</h1>
     </>
   );
 };
